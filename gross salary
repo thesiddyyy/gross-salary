@@ -1,0 +1,15 @@
+salary = float(input("Enter the salary: "))
+non_tax_salary = salary - 250000
+non_tax_salary = max(0, non_tax_salary)
+after_compensation = non_tax_salary - 50000
+final_salary = after_compensation
+print("Final salary jispe tax lagega =", final_salary)
+if final_salary <= 250000:
+    print("0% income tax rate")
+elif final_salary <= 500000:
+    print("5% income tax rate")
+    income_tax_rate = final_salary * 5 / 100
+    final_salary -= income_tax_rate
+    print("Income tax rate kaatne ke baad final salary =", final_salary)
+else:
+    print("Income tax rate greater than 5% is not handled in this example"
